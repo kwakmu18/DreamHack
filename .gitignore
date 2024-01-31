@@ -1,0 +1,4 @@
+*.zip
+*.tar.gz
+libc.so.6
+ld-linux-86-64.so.2
