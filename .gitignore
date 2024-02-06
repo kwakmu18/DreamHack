@@ -4,3 +4,4 @@ libc.so.6
 ld-linux-86-64.so.2
 libc6-dbg.2.27-3ubuntu1_amd64.deb
 usr
+.gdb_history
