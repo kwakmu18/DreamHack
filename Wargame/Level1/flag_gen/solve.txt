@@ -1,0 +1,2 @@
+gdb set 명령어를 활용하여 rbp-0x4 (i)의 값을 5로 변경
+set {int}0x7fffffffdffc = 5
