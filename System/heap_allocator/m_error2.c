@@ -13,5 +13,5 @@ int main()
         fprintf(stderr, "BK: %p\n", ptr[1]);
         ptr[1] += 0x40;
         fprintf(stderr, "Corrupted BK: %p\n", ptr[1]);
-        malloc(0x21000);
+        malloc(0x209f0);
 }

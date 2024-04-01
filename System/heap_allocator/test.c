@@ -1,9 +1,5 @@
-#include <stdio.h>
-
-int add(int a, int b, int c) {
-    return a+b+c;
-}
+#include <stdlib.h>
 
 int main(void) {
-    add(1,2,3);
+    free(malloc(0x10));
 }

